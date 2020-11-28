@@ -8,59 +8,56 @@ import complexity
 from nltk.parse.corenlp import CoreNLPServer
 from nltk.parse import *
 
-#
-# TODO: FOR HANDLING EXCEPTIONS
-#
-# https://bbengfort.github.io/snippets/2018/06/22/corenlp-nltk-parses.html
-#
-# jars = (
-#     "stanford-corenlp-3.9.1.jar",
-#     "stanford-corenlp-3.9.1-models.jar"
-# )
-#
-# with CoreNLPServer(*jars):
-#     parser = CoreNLPParser()
-#
-#     text = "The runner scored from second on a base hit"
-#     parse = next(parser.parse_text(text))
-#     parse.draw()
+Dataset = list[str]
 
 
-def getVocabSize():
+def getVocabSize(dataset: Dataset):
     raise NotImplementedError
 
 
-def getFrazier():
+def getMeanFrazier(dataset: Dataset):
+    # TODO: Use helper functions in complexity.py
     raise NotImplementedError
 
 
-def getYgnve():
+def getMeanYngve(dataset: Dataset):
+    # TODO: Use helper functions in complexity.py
     raise NotImplementedError
 
 
-def getPoSDistribution():
+def getPoSDistribution(dataset: Dataset):
     raise NotImplementedError
 
 
-def getAbstractRatio():
+def getAbstractRatio(dataset: Dataset):
     raise NotImplementedError
 
 
-def getAvgSentLen():
+def getAvgSentLen(dataset: Dataset):
     raise NotImplementedError
 
 
-def getPerplexity():
+def getPerplexity(dataset: Dataset):
     raise NotImplementedError
 
 
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
 if __name__ == '__main__':
+    #
+    # TODO: FOR HANDLING EXCEPTIONS
+    #
+    # https://bbengfort.github.io/snippets/2018/06/22/corenlp-nltk-parses.html
+    #
+    # jars = (
+    #     "stanford-corenlp-3.9.1.jar",
+    #     "stanford-corenlp-3.9.1-models.jar"
+    # )
+    #
+    # with CoreNLPServer(*jars):
+    #     parser = CoreNLPParser()
+    #
+    #     text = "The runner scored from second on a base hit"
+    #     parse = next(parser.parse_text(text))
+
     working_directory = os.getcwd()
     core_nlp_directory = os.path.join(working_directory, 'stanford-corenlp-4.2.0')
 
@@ -77,3 +74,7 @@ if __name__ == '__main__':
     pee = complexity.word_score(parse)
     server.stop()
     print(pee)
+
+# TODO:
+# Download Lingual Aspects of Datasets and convert their lingual components into a list of strings.
+# Feed list of strings into each function

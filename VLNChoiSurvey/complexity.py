@@ -59,7 +59,7 @@ def get_mean_yngve(treestrings):
     try:
         score = float(total / c)
     except ZeroDivisionError:
-        logger.warning('ZeroDivisionError for Yngve calculation.')
+        # logger.warning('ZeroDivisionError for Yngve calculation.')
         score = 0.0
 
     return score
@@ -103,7 +103,7 @@ def get_mean_frazier(treestrings):
     try:
         score = float(total_frazier_score) / float(total_word_count)
     except ZeroDivisionError:
-        lg.warning('ZeroDivisionError for Frazier calculation.')
+        # lg.warning('ZeroDivisionError for Frazier calculation.')
         score = 0.0
 
     return score
