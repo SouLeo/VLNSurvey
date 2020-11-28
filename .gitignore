@@ -1,0 +1,16 @@
+
+*.jar
+*.txt
+*.props
+*.xml
+*.out
+*.java
+*.properties
+*.pdf
+VLNChoiSurvey/stanford-corenlp-4.2.0/LIBRARY-LICENSES
+VLNChoiSurvey/stanford-corenlp-4.2.0/Makefile
+VLNChoiSurvey/stanford-corenlp-4.2.0/RESOURCE-LICENSES
+*.sh
+*.xsl
+*.iml
+*.pyc
